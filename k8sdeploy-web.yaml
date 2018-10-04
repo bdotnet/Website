@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: bdotnet-app
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bdotnet-app
+    spec:
+      containers:
+        - name: bdotnet-app
+          image: nishanil/bdotnet:v1.1
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bdotnet-app-svc
+  labels:
+    app: bdotnet-app
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: bdotnet-app
+

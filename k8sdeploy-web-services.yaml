@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: bdotnet-app
-          image: nishanil/bdotnet:v2.0
+          image: nishanil/bdotnet:v1.1
           ports:
             - containerPort: 80
 ---
@@ -45,7 +45,7 @@ spec:
     spec:
       containers:
         - name: bdotnet-submittalks-app
-          image: nishanil/bdotnet-submittalks:v1
+          image: nishanil/bdotnet-submittalks:v1.0.2
           ports:
             - containerPort: 80
 ---
