@@ -8,6 +8,9 @@ ENV DOCKER_IMAGE_NAME="website"
 
 USER root
 
+RUN echo http://mirror.yandex.ru/mirrors/alpine/v3.8/main > /etc/apk/repositories; \
+    echo http://mirror.yandex.ru/mirrors/alpine/v3.8/community >> /etc/apk/repositories
+    
 RUN apk add --no-cache \
 curl \
 git \
