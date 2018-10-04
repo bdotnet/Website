@@ -9,12 +9,16 @@ $(document).ready(function(){
         var postData = JSON.stringify(jsonData);
         
         $.ajax({
-            url: "http://"+ip+"api/SubmitTalk?t=Talk proposal from :" + name +"&d=" + email + "/n" + topic,
+            url: "http://"+ip+"/api/SubmitTalk?t=Talk Submission from: "+name+"&d="+email+"\n"+topic,
             method: "post",
             data: postData,
             success: function(d)
             {
                 alert("Thanks. We will get back to you.");
+            },
+            error: function (jqXHR, exception)
+            {
+                alert(jqXHR.responseText);
             }
         })
     });
