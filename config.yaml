@@ -1,4 +1,4 @@
-baseURL: http://localhost/
+baseURL: http://104.42.248.235/
 languageCode: en-us
 title: Welcome to B.NET
 theme: "Hugo Fresh"
