@@ -11,7 +11,6 @@ $(document).ready(function(){
         $.ajax({
             url: "http://"+ip+"/api/SubmitTalk?t=Talk Submission from: "+name+"&d="+email+"\n"+topic,
             method: "post",
-            data: postData,
             success: function(d)
             {
                 alert("Thanks. We will get back to you.");
