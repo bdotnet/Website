@@ -7,7 +7,6 @@ $(document).ready(function(){
 
         var jsonData = {name: name, email: email, topic: topic};
         var postData = JSON.stringify(jsonData);
-       // alert(postData);
         
         $.ajax({
             url: "http://"+ip+"api/SubmitTalk?t=Talk proposal from :" + name +"&d=" + email + "/n" + topic,
